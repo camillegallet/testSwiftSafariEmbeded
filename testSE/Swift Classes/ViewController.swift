@@ -4,18 +4,17 @@ import SafariServices
 
 class ViewController: UIViewController {
 
-    var webView: WKWebView?
 
 
     @IBOutlet weak var KronosWebsite: WKWebView!
 
     override func loadView() {
-        self.view = webView
+        KronosWebsite = WKWebView()
+        self.view = KronosWebsite
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView = WKWebView()
         openGoogle()
     }
 
